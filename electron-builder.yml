@@ -1,0 +1,29 @@
+appId: com.thelunatic1.vaultbrowser
+productName: VaultBrowser
+directories:
+  output: release
+files:
+  - dist/**/*
+  - main/**/*
+  - package.json
+publish:
+  provider: github
+  owner: TheLunatic1
+  repo: VaultBrowser
+releaseInfo:
+  releaseNotesFile: RELEASE_NOTES.md
+win:
+  target:
+    - nsis
+    - portable
+  icon: src/assets/logo.png
+nsis:
+  artifactName: ${productName}-Setup-${version}.${ext}
+portable:
+  artifactName: ${productName}-Portable-${version}.${ext}
+mac:
+  target: dmg
+  icon: src/assets/logo.png
+linux:
+  target: AppImage
+  icon: src/assets/logo.png
