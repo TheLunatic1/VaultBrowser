@@ -122,8 +122,8 @@ jobs:
           body_path: RELEASE_NOTES.md
           generate_release_notes: true
           files: |
-            dist/*.exe
-            dist/latest.yml
+            release/*.exe
+            release/latest.yml
 
       - name: Publish to GitHub Releases (Linux)
         if: matrix.os == 'ubuntu-latest'
@@ -133,8 +133,8 @@ jobs:
           body_path: RELEASE_NOTES.md
           generate_release_notes: true
           files: |
-            dist/*.AppImage
-            dist/latest-linux.yml
+            release/*.AppImage
+            release/latest-linux.yml
 
       - name: Publish to GitHub Releases (macOS)
         if: matrix.os == 'macos-latest'
@@ -144,6 +144,6 @@ jobs:
           body_path: RELEASE_NOTES.md
           generate_release_notes: true
           files: |
-            dist/*.dmg
-            dist/*.zip
-            dist/latest-mac.yml
+            release/*.dmg
+            release/*.zip
+            release/latest-mac.yml
